@@ -1,20 +1,21 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InventoryPanel : MonoBehaviour
 {
-    public Image selectedIcon;
+    public Image selectIcon;
     public TMP_Text descriptionText;
     public Transform rightPanelTransform;
     public GameObject itemButtonPrefab;
 
     public void OnOpen()
     {
-        for (int i = rightPanelTransform.childCount - 1;i >= 0; i++)
+        for (int i = rightPanelTransform.childCount - 1; i >= 0; i--)
         {
             Destroy(rightPanelTransform.GetChild(i).gameObject);
         }
+
         for (int i = 0; i < InventoryManager.instance.inventoryList.Count; i++)
         {
             GameObject itemButtonObj = Instantiate(itemButtonPrefab, rightPanelTransform);
@@ -24,7 +25,7 @@ public class InventoryPanel : MonoBehaviour
             Button button = itemButtonObj.GetComponent<Button>();
             button.onClick.AddListener(() =>
             {
-                selectedIcon.sprite = itemButtonComp.data.itemIcon;
+                selectIcon.sprite = itemButtonComp.data.itemIcon;
                 descriptionText.text = itemButtonComp.data.description;
             });
         }

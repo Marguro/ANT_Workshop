@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
@@ -18,18 +16,22 @@ public class InventoryManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     public List<ItemData> inventoryList = new List<ItemData>();
-    
+
     public void AddItem(ItemData item)
     {
         inventoryList.Add(item);
     }
-    public void GetItemAmount(ItemData item)
+
+    public int GetItemAmount(ItemData data)
     {
         int amount = 0;
         foreach (ItemData item in inventoryList)
         {
             if(item == data)
-                amount++
+                amount++;
+        }
+        return amount;
     }
 }

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -10,24 +9,28 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
-        Debug.DrawRay(Camera.main.transform.position,Camera.main.transform.forward * 5f,Color.green);
-        if (Input.GetMouseButtonDown(0))
+        Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * 5f, Color.green);
+        if(Input.GetMouseButtonDown(0))
         {
-            if (Physics.Raycast(Camera.main.transform.position,
-                    Camera.main.transform.forward,
-                    out RaycastHit hit, 5f, mask))
+            if(Physics.Raycast(Camera.main.transform.position,
+                                Camera.main.transform.forward,
+                                out RaycastHit hit,
+                                5f, mask))
             {
-                Debug.Log("Hit Someting");
+                Debug.Log("Hit someting");
                 IInteractable comp = hit.collider.gameObject.GetComponent<IInteractable>();
                 comp.Interact();
             }
         }
-        if (Input.GetKeyDown(KeyCode.I))
+
+        if(Input.GetKeyDown(KeyCode.I))
         {
             GameManager.instance.OpenInventoryPanel();
         }
+
         if (Input.GetKeyDown(KeyCode.O))
         {
-            GameManager.instance.CloseInventoryPanel();        }
+            GameManager.instance.CloseInventoryPanel();
+        }
     }
 }
