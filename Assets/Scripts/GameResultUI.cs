@@ -10,12 +10,10 @@ public class GameResultUI : MonoBehaviour
         if (isWin)
         {
             resultText.text = "You Win!";
-            resultText.color = Color.green;
         }
         else
         {
             resultText.text = "You Lose!";
-            resultText.color = Color.red;
         }
     }
 }

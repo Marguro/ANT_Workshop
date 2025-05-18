@@ -242,8 +242,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1325,6 +1325,7 @@ GameObject:
   - component: {fileID: 677112459}
   - component: {fileID: 677112458}
   - component: {fileID: 677112457}
+  - component: {fileID: 677112460}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -1347,9 +1348,9 @@ RectTransform:
   - {fileID: 395268108}
   m_Father: {fileID: 242110114}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 246.25, y: -422.5}
   m_SizeDelta: {x: 255, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &677112457
@@ -1395,7 +1396,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 677112458}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 677112460}
+        m_TargetAssemblyTypeName: RestartButton, Assembly-CSharp
+        m_MethodName: OnPressRestartButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &677112458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1434,6 +1447,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677112455}
   m_CullTransparentMesh: 1
+--- !u!114 &677112460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677112455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e4d03714c3369375bab4174d8627c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &714519209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2285,51 +2310,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35453ec308f30b94fb2f2060f5cdb794, type: 3}
---- !u!1 &1128895205
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1128895207}
-  - component: {fileID: 1128895206}
-  m_Layer: 0
-  m_Name: UIManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1128895206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128895205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15928feb668d8ac4b910f38dfdb15848, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  resultText: {fileID: 175547312}
---- !u!4 &1128895207
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128895205}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 866.6726, y: 546.444, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1210144765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2621,6 +2601,7 @@ GameObject:
   - component: {fileID: 1343866268}
   - component: {fileID: 1343866267}
   - component: {fileID: 1343866266}
+  - component: {fileID: 1343866269}
   m_Layer: 5
   m_Name: ReturnButton
   m_TagString: Untagged
@@ -2643,9 +2624,9 @@ RectTransform:
   - {fileID: 415750800}
   m_Father: {fileID: 242110114}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 746.25, y: -422.5}
   m_SizeDelta: {x: 270, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1343866266
@@ -2691,7 +2672,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1343866267}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1343866269}
+        m_TargetAssemblyTypeName: ReturnButton, Assembly-CSharp
+        m_MethodName: OnPressReturnButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1343866267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2730,6 +2723,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343866264}
   m_CullTransparentMesh: 1
+--- !u!114 &1343866269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343866264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcbf015f74f7e24abbdaececaa40119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1398200203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2975,13 +2980,14 @@ GameObject:
   - component: {fileID: 1512287825}
   - component: {fileID: 1512287824}
   - component: {fileID: 1512287823}
+  - component: {fileID: 1512287827}
   m_Layer: 5
   m_Name: GameResultCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1512287823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3066,6 +3072,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1512287827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512287822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15928feb668d8ac4b910f38dfdb15848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resultText: {fileID: 175547312}
 --- !u!1001 &1515390247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3725,14 +3744,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameplayCanvas: {fileID: 804029924}
   GameResultCanvas: {fileID: 1512287822}
-  inventoryPanel: {fileID: 1485529876}
-  timeCounter: 30
+  MainCamara: {fileID: 6062842155547987472}
+  timeCounter: 5
   targetItem: {fileID: 11400000, guid: 2d9bb089b1561a844be6b6c228dfc27e, type: 2}
-  targetAmout: 5
+  targetAmout: 1
   timeCounterText: {fileID: 1854231752}
   targetItemIcon: {fileID: 2014294693}
   targetCurrentAmountText: {fileID: 369207703}
   isPlayerWin: 0
+  inventoryPanel: {fileID: 1485529876}
 --- !u!4 &2060919146
 Transform:
   m_ObjectHideFlags: 0
@@ -4546,6 +4566,7 @@ GameObject:
   - component: {fileID: 6062842155547987475}
   - component: {fileID: 6195880862715982349}
   - component: {fileID: 6195880862715982350}
+  - component: {fileID: 6195880862715982351}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -4705,6 +4726,18 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &6195880862715982351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6062842155547987472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a85f4c0804a8cf3a8faa306d446b95b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6549607101663749422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4984,4 +5017,3 @@ SceneRoots:
   - {fileID: 476454274}
   - {fileID: 804029928}
   - {fileID: 1512287826}
-  - {fileID: 1128895207}
