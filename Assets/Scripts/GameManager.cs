@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject GameplayCanvas;
+    public GameObject GameResultCanvas;
     public static GameManager instance;
 
     private void Awake()
@@ -72,7 +74,8 @@ public class GameManager : MonoBehaviour
         }
         else // player lose
         {
-            SceneManager.LoadScene("MainMenu");
+            GameResultCanvas.SetActive(true);
+            GameResultCanvas.GetComponent<GameResultUI>().ShowResult(false);
         }
     }
 }
